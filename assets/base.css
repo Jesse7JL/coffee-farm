@@ -2957,3 +2957,38 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+/* Slider CSS */
+.slider-container {
+  width: 100%;
+
+}
+.slide-card {
+  width: 400px;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px  rgba(0, 0, 0, 0.20);
+  
+}
+.slide-card p {
+  text-align: center;
+}
+.testimonial-image {
+  text-align: center;
+}
+.testimonial-image img {
+  border-radius: 50%;
+  width: 100px;
+  margin: auto;
+}
+.testimonail-user-name {
+  text-align: center;
+}
+.quote-icon{
+  margin-right: auto;
+}
+.quote-icon svg {
+  width: 25px;
+  height: 25px;
+
+}

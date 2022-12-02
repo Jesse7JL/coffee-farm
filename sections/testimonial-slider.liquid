@@ -1,0 +1,57 @@
+<div class="slider-container">
+  {%- if section.blocks >= 3 -%}
+    It works
+  {%- endif -%}
+  {%- for block in section.blocks -%}
+
+    <div class="slide-card">
+      <div class="quote-icon">
+        {% render 'icon-quote.liquid' %}
+      </div>
+
+      <p>{{block.settings.testimonial-text}}</p>
+
+      <div class="testimonial-image">
+        <img src="{{block.settings.img | img_url: '300x' }}" alt=""/>
+      </div>
+
+      <p class="testimonial-user-name">{{block.settings.name}}</p>
+    </div>
+  {%- endfor -%}
+
+</div>
+
+
+{%- schema -%}
+  {
+    "name": "testimonial-slider",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "Testimonial",
+            "id": "testimonial-text"
+          }, {
+            "type": "text",
+            "label": "Name",
+            "id": "name"
+          }, {
+            "type": "image_picker",
+            "label": "Image",
+            "id": "img"
+          }
+        ]
+
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonial Slider"
+      }
+    ]
+  }
+{%- endschema -%}
